@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c20dedb-004e-432a-a75c-6bb3e678ea5b" name="Default Changelist" comment="" />
+    <list default="true" id="9c20dedb-004e-432a-a75c-6bb3e678ea5b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AccueilController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AccueilController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categorie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Contenir.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Contenir.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/EtatCommande.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/EtatCommande.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Personnel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Personnel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,8 +145,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../boutique" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -145,11 +160,61 @@
       <option name="presentableId" value="Default" />
       <updated>1605626070971</updated>
       <workItem from="1605626072130" duration="1152000" />
-      <workItem from="1605692488698" duration="2212000" />
+      <workItem from="1605692488698" duration="11020000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1605694932858</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605694932858</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1155" y="202" key="#com.intellij.ide.util.MemberChooser" timestamp="1605714029037">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1155" y="202" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605714029037" />
+    <state x="-1343" y="148" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605712425016">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1343" y="148" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605712425016" />
+    <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605710277903">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605710277903" />
+    <state x="-1335" y="97" key="CommitChangelistDialog2" timestamp="1605694931817">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1335" y="97" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605694931817" />
+    <state x="-1828" y="92" width="1736" height="856" key="DirDiffDialog" timestamp="1605712497147">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1828" y="92" width="1736" height="856" key="DirDiffDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605712497147" />
+    <state x="-1180" y="261" key="FileChooserDialogImpl" timestamp="1605710826519">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605710826519" />
+    <state x="-1459" y="165" key="SettingsEditor" timestamp="1605708209812">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1459" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605708209812" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605695218259">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605695218259" />
+    <state x="-1159" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1605695153767">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1159" y="426" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605695153767" />
   </component>
 </project>

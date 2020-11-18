@@ -3,14 +3,15 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
- * Personnel
+ * PersonnelFixtures
  *
  * @ORM\Table(name="personnel", indexes={@ORM\Index(name="Id_Profil", columns={"Id_Profil"})})
  * @ORM\Entity
  */
-class Personnel
+class Personnel implements UserInterface
 {
     /**
      * @var int
@@ -47,7 +48,7 @@ class Personnel
      *
      * @ORM\Column(name="mdp", type="string", length=50, nullable=true)
      */
-    private $mdp;
+    private $password;
 
     /**
      * @var string|null
@@ -69,6 +70,11 @@ class Personnel
      * @ORM\Column(name="Id_Profil", type="integer", nullable=false)
      */
     private $idProfil;
+
+    /**
+     * @ORM\Column(type="json")
+     */
+    private $roles = [];
 
     public function getIdPersonnel(): ?int
     {
@@ -111,18 +117,6 @@ class Personnel
         return $this;
     }
 
-    public function getMdp(): ?string
-    {
-        return $this->mdp;
-    }
-
-    public function setMdp(?string $mdp): self
-    {
-        $this->mdp = $mdp;
-
-        return $this;
-    }
-
     public function getTelephone(): ?string
     {
         return $this->telephone;
@@ -159,5 +153,62 @@ class Personnel
         return $this;
     }
 
+    /**
+     * @see UserInterface
+     */
+    public function getPassword(): string
+    {
+        return (string) $this->password;
+    }
 
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    public function getRoles(): array
+    {
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
+
+        return $this;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function getSalt()
+    {
+        // not needed when using the "bcrypt" algorithm in security.yaml
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
+    }
+
+    /**
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUsername(): string
+    {
+//        return (string) $this->email;
+        return (string) $this->pseudo;
+    }
 }

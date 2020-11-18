@@ -49,58 +49,87 @@ class Client
      */
     private $telephone;
 
-    public function getIdClient(): ?int
+    /**
+     * @return int
+     */
+    public function getIdClient(): int
     {
         return $this->idClient;
     }
 
+    /**
+     * @param int $idClient
+     */
+    public function setIdClient(int $idClient): void
+    {
+        $this->idClient = $idClient;
+    }
+
+    /**
+     * @return string|null
+     */
     public function getPrenom(): ?string
     {
         return $this->prenom;
     }
 
-    public function setPrenom(?string $prenom): self
+    /**
+     * @param string|null $prenom
+     */
+    public function setPrenom(?string $prenom): void
     {
         $this->prenom = $prenom;
-
-        return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getNom(): ?string
     {
         return $this->nom;
     }
 
-    public function setNom(?string $nom): self
+    /**
+     * @param string|null $nom
+     */
+    public function setNom(?string $nom): void
     {
         $this->nom = $nom;
-
-        return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getEmail(): ?string
     {
         return $this->email;
     }
 
-    public function setEmail(?string $email): self
+    /**
+     * @param string|null $email
+     */
+    public function setEmail(?string $email): void
     {
         $this->email = $email;
-
-        return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getTelephone(): ?string
     {
         return $this->telephone;
     }
 
-    public function setTelephone(?string $telephone): self
+    /**
+     * @param string|null $telephone
+     */
+    public function setTelephone(?string $telephone): void
     {
         $this->telephone = $telephone;
-
-        return $this;
     }
+
+
 
 
 }

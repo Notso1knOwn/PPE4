@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Commande
  *
- * @ORM\Table(name="commande", indexes={@ORM\Index(name="Id_Client", columns={"Id_Client"}), @ORM\Index(name="Id_Etat_Commande", columns={"Id_Etat_Commande"}), @ORM\Index(name="Id_Personnel", columns={"Id_Personnel"})})
+ * @ORM\Table(name="commande", indexes={@ORM\Index(name="Id_Etat_Commande", columns={"Id_Etat_Commande"}), @ORM\Index(name="Id_Personnel", columns={"Id_Personnel"}), @ORM\Index(name="Id_Client", columns={"Id_Client"})})
  * @ORM\Entity
  */
 class Commande
@@ -48,59 +48,6 @@ class Commande
      * @ORM\Column(name="Id_Personnel", type="integer", nullable=false)
      */
     private $idPersonnel;
-
-    public function getIdCommande(): ?int
-    {
-        return $this->idCommande;
-    }
-
-    public function getDateCommande(): ?\DateTimeInterface
-    {
-        return $this->dateCommande;
-    }
-
-    public function setDateCommande(\DateTimeInterface $dateCommande): self
-    {
-        $this->dateCommande = $dateCommande;
-
-        return $this;
-    }
-
-    public function getIdEtatCommande(): ?int
-    {
-        return $this->idEtatCommande;
-    }
-
-    public function setIdEtatCommande(int $idEtatCommande): self
-    {
-        $this->idEtatCommande = $idEtatCommande;
-
-        return $this;
-    }
-
-    public function getIdClient(): ?int
-    {
-        return $this->idClient;
-    }
-
-    public function setIdClient(int $idClient): self
-    {
-        $this->idClient = $idClient;
-
-        return $this;
-    }
-
-    public function getIdPersonnel(): ?int
-    {
-        return $this->idPersonnel;
-    }
-
-    public function setIdPersonnel(int $idPersonnel): self
-    {
-        $this->idPersonnel = $idPersonnel;
-
-        return $this;
-    }
 
 
 }

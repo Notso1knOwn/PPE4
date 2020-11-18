@@ -35,33 +35,52 @@ class Categorie
      */
     private $descriptif;
 
-    public function getIdCategorie(): ?int
+    /**
+     * @return int
+     */
+    public function getIdCategorie(): int
     {
         return $this->idCategorie;
     }
 
+    /**
+     * @param int $idCategorie
+     */
+    public function setIdCategorie(int $idCategorie): void
+    {
+        $this->idCategorie = $idCategorie;
+    }
+
+    /**
+     * @return string|null
+     */
     public function getLibelle(): ?string
     {
         return $this->libelle;
     }
 
-    public function setLibelle(?string $libelle): self
+    /**
+     * @param string|null $libelle
+     */
+    public function setLibelle(?string $libelle): void
     {
         $this->libelle = $libelle;
-
-        return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getDescriptif(): ?string
     {
         return $this->descriptif;
     }
 
-    public function setDescriptif(?string $descriptif): self
+    /**
+     * @param string|null $descriptif
+     */
+    public function setDescriptif(?string $descriptif): void
     {
         $this->descriptif = $descriptif;
-
-        return $this;
     }
 
 
