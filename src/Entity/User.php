@@ -11,7 +11,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @ORM\Table(name="personnel", indexes={@ORM\Index(name="Id_Profil", columns={"Id_Profil"})})
  * @ORM\Entity
  */
-class Personnel implements UserInterface
+class User implements UserInterface
 {
     /**
      * @var int
@@ -46,7 +46,7 @@ class Personnel implements UserInterface
     /**
      * @var string|null
      *
-     * @ORM\Column(name="mdp", type="string", length=50, nullable=true)
+     * @ORM\Column(name="password", type="string", length=50, nullable=true)
      */
     private $password;
 
@@ -209,6 +209,30 @@ class Personnel implements UserInterface
     public function getUsername(): string
     {
 //        return (string) $this->email;
-        return (string) $this->pseudo;
+        return (string) $this->email;
     }
+
+    public function __serialize(): array
+    {
+        return serialize([
+            $this->idPersonnel,
+            $this->nom,
+            $this->prenom,
+            $this->pseudo,
+            $this->email,
+            $this->telephone
+        ]);
+    }
+
+    public function __unserialize(array $data): void
+    {
+        list($this->idPersonnel,
+            $this->nom,
+            $this->prenom,
+            $this->pseudo,
+            $this->email,
+            $this->telephone) = unserialize($data, ['allowed_classes' => false]);
+    }
+
+
 }
