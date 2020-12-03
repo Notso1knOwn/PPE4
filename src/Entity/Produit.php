@@ -70,6 +70,15 @@ class Produit
      */
     private $idCategorie;
 
+    /**
+     * @param int $idProduit
+     */
+    public function setIdProduit(int $idProduit): void
+    {
+        $this->idProduit = $idProduit;
+    }
+
+
     public function getIdProduit(): ?int
     {
         return $this->idProduit;

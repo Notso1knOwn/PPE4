@@ -37,5 +37,53 @@ class Contenir
      */
     private $quantite;
 
+    /**
+     * @return int
+     */
+    public function getIdCommande(): int
+    {
+        return $this->idCommande;
+    }
+
+    /**
+     * @param int $idCommande
+     */
+    public function setIdCommande(int $idCommande): void
+    {
+        $this->idCommande = $idCommande;
+    }
+
+    /**
+     * @return int
+     */
+    public function getIdProduit(): int
+    {
+        return $this->idProduit;
+    }
+
+    /**
+     * @param int $idProduit
+     */
+    public function setIdProduit(int $idProduit): void
+    {
+        $this->idProduit = $idProduit;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getQuantite(): ?int
+    {
+        return $this->quantite;
+    }
+
+    /**
+     * @param int|null $quantite
+     */
+    public function setQuantite(?int $quantite): void
+    {
+        $this->quantite = $quantite;
+    }
+
 
 }

@@ -1,0 +1,55 @@
+body {
+  padding-top: 56px;
+  font-weight: bold !important;
+}
+
+html , body{
+  height: 100%!important ;
+  margin:0!important;
+  padding: 0!important;
+}
+
+nav , footer{
+  background-image: linear-gradient(120deg , #FF9700 , #FE51E1);
+}
+
+
+header.masthead {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  background: url('http://10.0.10.137:8082/PPE4/Images/ASUS.jpg') no-repeat center center!important;
+  background-size: cover!important;
+}
+
+
+header.masthead h1 {
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px #64EFFF, 0 0 0.5em #64EFFF, 0 0 0.5em #64EFFF;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+
+
+
+.PC{
+  text-decoration: none;
+  background-image: linear-gradient(120deg , #DB01FE , #018AFE);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200%;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+}

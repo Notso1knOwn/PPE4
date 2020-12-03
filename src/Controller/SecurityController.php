@@ -33,4 +33,22 @@ class SecurityController extends AbstractController
     {
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
+
+    /**
+     * @Route("/parametre", name="parametre")
+     */
+    public function parametreRoute(){
+        return $this->render('security/parametre.html.twig', [
+            'controller_name' => 'SecurityController',
+        ]);
+    }
+
+    /**
+     * @Route("/panier", name="panier")
+     */
+    public function panierRoute(){
+        return $this->render('security/panier.html.twig', [
+            'controller_name' => 'SecurityController',
+        ]);
+    }
 }

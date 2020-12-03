@@ -214,14 +214,15 @@ class User implements UserInterface
 
     public function __serialize(): array
     {
-        return serialize([
+        return [
             $this->idPersonnel,
             $this->nom,
             $this->prenom,
             $this->pseudo,
             $this->email,
+            $this->password,
             $this->telephone
-        ]);
+        ];
     }
 
     public function __unserialize(array $data): void
@@ -231,7 +232,8 @@ class User implements UserInterface
             $this->prenom,
             $this->pseudo,
             $this->email,
-            $this->telephone) = unserialize($data, ['allowed_classes' => false]);
+            $this->password,
+            $this->telephone) = unserialize(serialize($data), ['allowed_classes' => false]);
     }
 
 

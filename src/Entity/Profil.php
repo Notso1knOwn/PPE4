@@ -35,6 +35,14 @@ class Profil
      */
     private $descriptif;
 
+    /**
+     * @param int $idProfil
+     */
+    public function setIdProfil(int $idProfil): void
+    {
+        $this->idProfil = $idProfil;
+    }
+
     public function getIdProfil(): ?int
     {
         return $this->idProfil;

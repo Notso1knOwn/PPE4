@@ -2,11 +2,152 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}2TAK Hardware{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            <link rel="icon" href="http://10.0.10.137:8082/PPE4/Icones/icons8-processeur-64.png">
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block navbar %}
+
+            {%  set spanCurrent = '<span class="sr-only">(current)</span>' %}
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container">
+                    <div class="dropdown">
+                        {%  if app.user.pseudo is defined %}
+                            <button class="btn btn-secondary dropdown-toggle mybtn navbar-brand" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ app.user.pseudo }}</button>
+                        {% else %}
+                            <a class="navbar-brand" href="{{ path('accueil') }}">2TAK Hardware</a>
+                        {% endif %}
+
+
+                        <div class="mydropdown">
+                            <ul class="dropdown-menu dropdown-menu-center text-center">
+                                <li> <a href="{{ path('parametre') }}" class="dropdown-item"> Paramètres </a> </li>
+                                <li> <a href="{{ path("app_logout") }}" class="dropdown-item"> Déconnexion </a> </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link {% if app.request.attributes.get('_route') == 'accueil' %}active{% endif %}" href="{{ path('accueil') }}">Accueil</a>{% if app.request.attributes.get('_route') == 'accueil' %}{{ spanCurrent|raw }}{% endif %}
+                            </li>
+
+                            <li class="nav-item ">
+                                <div class="dropdown ">
+                                    <button class="btn btn-secondary dropdown-toggle nav-link {% if app.request.attributes.get('_route') in  ['tour','laptop'] %}active{% endif %} mybtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Ordinateurs
+                                        {% if app.request.attributes.get('_route') in  ['tour','laptop'] %}{{ spanCurrent|raw }}{% endif %}
+                                    </button>
+
+                                    <div class="mydropdown">
+                                        <ul class="dropdown-menu dropdown-menu-center text-center">
+                                            <li> <a href="{{ path('tour') }}" class="dropdown-item"> Tour </a> </li>
+                                            <li> <a href="{{ path('laptop') }}" class="dropdown-item"> Laptop </a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link {% if app.request.attributes.get('_route') == 'creerConfig' %}active{% endif %}" href="{{ path('creerConfig') }}">CréerConfig</a>{% if app.request.attributes.get('_route') == 'creerConfig' %}{{ spanCurrent|raw }}{% endif %}
+                            </li>
+
+                            <li class="nav-item ">
+                                <div class="dropdown ">
+                                    <button class="btn btn-secondary dropdown-toggle nav-link {% if app.request.attributes.get('_route') in ['processeur', 'carteMere', 'carteGraphique', 'ram', 'stockage' ,'refroidissement', 'alimentation', 'boitier'] %}active{% endif %} ?> mybtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Composants
+                                        {% if app.request.attributes.get('_route') in ['processeur', 'carteMere', 'carteGraphique', 'ram', 'stockage' ,'refroidissement', 'alimentation', 'boitier'] %}{{ spanCurrent|raw }}{% endif %}
+                                    </button>
+
+                                    <div class="mydropdown">
+                                        <ul class="dropdown-menu dropdown-menu-center text-center">
+                                            <li> <a href="{{ path('processeur') }}" class="dropdown-item"> Processeur </a> </li>
+                                            <li> <a href="{{ path('carteMere') }}" class="dropdown-item"> Carte Mère </a> </li>
+                                            <li> <a href="{{ path('carteGraphique') }}" class="dropdown-item"> Carte Graphique </a> </li>
+                                            <li> <a href="{{ path('ram') }}" class="dropdown-item"> RAM </a> </li>
+                                            <li> <a href="{{ path('stockage') }}" class="dropdown-item"> Stockage </a> </li>
+                                            <li> <a href="{{ path('refroidissement') }}" class="dropdown-item"> Refroisissement </a> </li>
+                                            <li> <a href="{{ path('alimentation') }}" class="dropdown-item"> Alimentation </a> </li>
+                                            <li> <a href="{{ path('boitier') }}" class="dropdown-item"> Boitier </a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item ">
+                                <div class="dropdown ">
+                                    <button class="btn btn-secondary dropdown-toggle nav-link {% if app.request.attributes.get('_route') in ['ecran', 'clavier', 'souris', 'micro', 'casque'] %}active{% endif %} mybtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Périphériques
+                                        {% if app.request.attributes.get('_route') in ['ecran', 'clavier', 'souris', 'micro', 'casque'] %}{{ spanCurrent|raw }}{% endif %}
+                                    </button>
+
+                                    <div class="mydropdown">
+                                        <ul class="dropdown-menu dropdown-menu-center text-center">
+                                            <li> <a href="{{ path('ecran') }}" class="dropdown-item"> Ecran </a> </li>
+                                            <li> <a href="{{ path('clavier') }}" class="dropdown-item"> Clavier </a> </li>
+                                            <li> <a href="{{ path('souris') }}" class="dropdown-item"> Souris </a> </li>
+                                            <li> <a href="{{ path('micro') }}" class="dropdown-item"> Micro </a> </li>
+                                            <li> <a href="{{ path('casque') }}" class="dropdown-item"> Casque </a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="nav-item ">
+                                {% if app.user.pseudo is defined %}
+                                    <a class ='nav-link {% if app.request.attributes.get('_route') == 'login' %}active{% endif %}' href='{{ path('panier') }}'>Panier</a>
+                                {% else %}
+                                    <button type='button' class='btn btn-secondary nav-link mybtn' id='btn_connexion' data-toggle='modal' data-target='#modal_connexion'>Connexion</button>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+        {% endblock %}
+
+        {% block body %}
+            {% set content %}
+                {{ include('modalConnexion.html.twig') }}
+                {{ include('modalInscription.html.twig') }}
+            {% endset %}
+        {% endblock %}
+
+        {% block footer %}
+            <!-- Footer -->
+            <footer id="footer" class="py-5 bg-dark">
+                <div class="container">
+                    <p class="m-0 text-center text-white">Copyright &copy; 2TAK Hardware 2020</p>
+                </div>
+                <!-- /.container -->
+            </footer>
+
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('jquery') }}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_script_tags('input-focus') }}
+            {{ encore_entry_script_tags('modal') }}
+            {{ encore_entry_script_tags('modal_inscription') }}
+            {{ encore_entry_script_tags('Panier') }}
+            {{ encore_entry_script_tags('showcheckboxes') }}
+            {{ encore_entry_script_tags('dropdown') }}
+            {{ encore_entry_script_tags('jquery') }}
+        {% endblock %}
     </body>
 </html>

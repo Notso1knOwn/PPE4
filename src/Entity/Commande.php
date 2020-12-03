@@ -49,5 +49,86 @@ class Commande
      */
     private $idPersonnel;
 
+    /**
+     * @return int
+     */
+    public function getIdCommande(): int
+    {
+        return $this->idCommande;
+    }
+
+    /**
+     * @param int $idCommande
+     */
+    public function setIdCommande(int $idCommande): void
+    {
+        $this->idCommande = $idCommande;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDateCommande(): \DateTime
+    {
+        return $this->dateCommande;
+    }
+
+    /**
+     * @param \DateTime $dateCommande
+     */
+    public function setDateCommande(\DateTime $dateCommande): void
+    {
+        $this->dateCommande = $dateCommande;
+    }
+
+    /**
+     * @return int
+     */
+    public function getIdEtatCommande(): int
+    {
+        return $this->idEtatCommande;
+    }
+
+    /**
+     * @param int $idEtatCommande
+     */
+    public function setIdEtatCommande(int $idEtatCommande): void
+    {
+        $this->idEtatCommande = $idEtatCommande;
+    }
+
+    /**
+     * @return int
+     */
+    public function getIdClient(): int
+    {
+        return $this->idClient;
+    }
+
+    /**
+     * @param int $idClient
+     */
+    public function setIdClient(int $idClient): void
+    {
+        $this->idClient = $idClient;
+    }
+
+    /**
+     * @return int
+     */
+    public function getIdPersonnel(): int
+    {
+        return $this->idPersonnel;
+    }
+
+    /**
+     * @param int $idPersonnel
+     */
+    public function setIdPersonnel(int $idPersonnel): void
+    {
+        $this->idPersonnel = $idPersonnel;
+    }
+
+
 
 }

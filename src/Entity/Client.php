@@ -49,6 +49,7 @@ class Client
      */
     private $telephone;
 
+
     /**
      * @return int
      */
