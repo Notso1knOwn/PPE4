@@ -2,44 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c20dedb-004e-432a-a75c-6bb3e678ea5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/composant/alimentation.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/composant/boitier.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/composant/carteGraphique.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/composant/carteMere.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/composant/processeur.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/composant/ram.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/composant/refroidissement.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/composant/stockage.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/modalConnexion.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/modalInscription.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ordinateurs/laptop.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/peripherique/casque.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/peripherique/clavier.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/peripherique/micro.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/peripherique/souris.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/panier.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/parametre.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/CardProduit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AccueilController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AccueilController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/PersonnelFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/PersonnelFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Commande.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commande.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Contenir.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Contenir.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Profil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PersonnelRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PersonnelRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/AppCustomAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/AppCustomAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accueil/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accueil/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/modalConnexion.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modalConnexion.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/modalInscription.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modalInscription.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +145,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
+    <property name="settings.editor.selected.configurable" value="http.certificates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -204,7 +175,7 @@
       <workItem from="1606229615489" duration="3292000" />
       <workItem from="1606825536661" duration="2928000" />
       <workItem from="1606900864391" duration="21378000" />
-      <workItem from="1606978910971" duration="8015000" />
+      <workItem from="1606978910971" duration="15517000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1605694932858</created>
@@ -234,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606837771915</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update">
+      <created>1607002981226</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607002981226</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,30 +242,35 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1230" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605710277903" />
-    <state x="585" y="97" key="CommitChangelistDialog2" timestamp="1606837771157">
+    <state x="585" y="97" key="CommitChangelistDialog2" timestamp="1607002978347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1335" y="97" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605714361053" />
-    <state x="585" y="97" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606837771157" />
-    <state x="92" y="92" width="1736" height="856" key="DirDiffDialog" timestamp="1607000372666">
+    <state x="585" y="97" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607002978347" />
+    <state x="92" y="92" width="1736" height="856" key="DirDiffDialog" timestamp="1607010275950">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1828" y="92" width="1736" height="856" key="DirDiffDialog/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605714437453" />
-    <state x="92" y="92" width="1736" height="856" key="DirDiffDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607000372666" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1606833334794">
+    <state x="92" y="92" width="1736" height="856" key="DirDiffDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607010275950" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1607003073045">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1180" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605710826519" />
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606833334794" />
-    <state x="-1459" y="165" key="SettingsEditor" timestamp="1605708209812">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607003073045" />
+    <state x="721" y="243" key="NewPhpClassDialog" timestamp="1607007990707">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="721" y="243" key="NewPhpClassDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607007990707" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1607003075559">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1459" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605708209812" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606837774030">
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607003075559" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607003085708">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1605714369734" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606837774030" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607003085708" />
     <state x="-1656" y="89" width="1369" height="717" maximized="true" key="dock-window-1" timestamp="1606921757630">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

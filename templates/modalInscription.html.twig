@@ -1,4 +1,3 @@
-{% block body %}
     <div class="modal fade" id="modal_inscription" tabindex="-1" role="dialog" aria-labelledby="modal_inscription_Label" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -25,7 +24,7 @@
 
                     <input type="submit" id="submitInscription" class="btnConnexion" name="Membre[submit]" value="Inscription">
                     <div class="NewAccount">
-                        {% if app.session.get('message') is defined %} {{ app.session.get('message') }} {% endblock %}
+                        {% if app.session.get('message') is defined %} {{ app.session.get('message') }} {% endif %}
                         </br></br>
                         <button type="button" class="btn btn-secondary" id="Annuler" data-dismiss="modal">Annuler</button>
                     </div>
@@ -34,4 +33,3 @@
             </div>
         </div>
     </div>
-{% endblock %}
