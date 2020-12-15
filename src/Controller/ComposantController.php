@@ -14,7 +14,8 @@ class ComposantController extends AbstractController
     public function processeurRoute(): Response
     {
         return $this->render('composant/processeur.html.twig', [
-            'controller_name' => 'ComposantController',
+            'controller_name' => 'Composant',
+            'page_name' => 'processeur',
         ]);
     }
 
