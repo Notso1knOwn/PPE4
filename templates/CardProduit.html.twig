@@ -1,2 +1,32 @@
-{% block body %}
+{% block cardProduit %}
+    <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+{#            <?php   $image = "../../Images/".$PremFamille."/".$Famille."/".$key['Modele'].".jpg";  ?>#}
+            <a href="#"><img class="card-img-top image" src='../../Images/{{ controller_name }}/{{ page_name }}/{{ produit.getLibelle }}.jpg' alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title text-center">
+                    <a href="#">{{ produit.getLibelle }}</a>
+                </h4>
+            </div>
+            <div class="card-footer">
+                <p class="card-text">{{ produit.getTarif }}€</p>
+
+                <!-- Début Ajout panier -->
+                {% if app.user %}
+                <a class="Panier" href="">
+                    <img src="../Icones/icons8-ajouter-au-panier-64.png" class="icone"></a>
+                {% endif %}
+
+            </div>
+            <div class="card-footer">
+                <!-- <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small> -->
+                <div class="cadre">
+                    <div class="noteGraph" style="width: {{ 10*produit.getNote }}px;"></div>
+                </div>
+                <div class="note float-right">
+                    <p>{{ produit.getNote }}/10</p>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

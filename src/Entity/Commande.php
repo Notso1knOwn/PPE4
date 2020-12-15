@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Commande
  *
  * @ORM\Table(name="commande", indexes={@ORM\Index(name="Id_Etat_Commande", columns={"Id_Etat_Commande"}), @ORM\Index(name="Id_Personnel", columns={"Id_Personnel"}), @ORM\Index(name="Id_Client", columns={"Id_Client"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass=App\Repository\CommandeRepository::class)
  */
 class Commande
 {
