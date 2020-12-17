@@ -2,7 +2,7 @@
     <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100">
 {#            <?php   $image = "../../Images/".$PremFamille."/".$Famille."/".$key['Modele'].".jpg";  ?>#}
-            <a href="#"><img class="card-img-top image" src='../../Images/{{ controller_name }}/{{ page_name }}/{{ produit.getLibelle }}.jpg' alt=""></a>
+            <a href="#"><img class="card-img-top image" src='../Images/{{ controller_name }}/{{ page_name }}/{{ produit.getLibelle }}.jpg' alt=""></a>
             <div class="card-body">
                 <h4 class="card-title text-center">
                     <a href="#">{{ produit.getLibelle }}</a>
@@ -13,7 +13,7 @@
 
                 <!-- Début Ajout panier -->
                 {% if app.user %}
-                <a class="Panier" href="">
+                <a class="Panier" href="{{ path('addPanier', {'id': produit.getIdProduit}) }}">
                     <img src="../Icones/icons8-ajouter-au-panier-64.png" class="icone"></a>
                 {% endif %}
 

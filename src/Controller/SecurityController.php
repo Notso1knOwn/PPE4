@@ -50,13 +50,4 @@ class SecurityController extends AbstractController
             'controller_name' => 'SecurityController',
         ]);
     }
-
-    /**
-     * @Route("/panier", name="panier")
-     */
-    public function panierRoute(){
-        return $this->render('security/panier.html.twig', [
-            'controller_name' => 'SecurityController',
-        ]);
-    }
 }
