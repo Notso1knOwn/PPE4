@@ -25,7 +25,7 @@
                     <tbody>
                     {% for produit in panier %}
                     <tr>
-                        <th> <img src="{{ produit.lienImage }}" class="image-panier"> <p class="">{{ produit.libelle }}</p> </th>
+                        <th> <img src="{{ produit.LienImage}}" class="image-panier"> <p class="">{{ produit.libelle }}</p> </th>
                         <th> <input type="number" min="0" max="{{ produit.stock }}" id="Quantite_{{ produit.id }}" class="form-control d-flex justify-content-center my-3" name="{{ produit.id }}" value="{{ produit.quantite }}" > </th>
                         <th> <p class="d-flex justify-content-center my-3">{{ produit.prix }} €</p> </th>
                         <th> <a href="{{ path('delProduitPanier') }}" class="d-flex justify-content-center my-3">

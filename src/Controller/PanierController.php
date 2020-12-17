@@ -16,10 +16,18 @@ class PanierController extends AbstractController
     /**
      * @Route("/panier", name="panier")
      */
-    public function index(): Response
+    public function index(SessionInterface $session, ProduitRepository $produitRepository): Response
     {
+        $panier = array();
+        foreach ($session->get('panier') as $idProduit => $quantite){
+            $arrayProduit = $produitRepository->findBy(['idProduit'=>$idProduit]);
+            $produit = $arrayProduit[0];
+            $produit->setLienImage('../Images/Ordinateur/Laptop/'.$produit->getLibelle());
+            array_push($panier, array($produit, $quantite));
+        }
         return $this->render('panier/index.html.twig', [
             'controller_name' => 'PanierController',
+            'panier' => $panier,
         ]);
     }
 
