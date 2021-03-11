@@ -28,7 +28,10 @@ Encore
     .addEntry('modal', './assets/styles/js/modal.js')
     .addEntry('modal_inscription', './assets/styles/js/modal_inscription.js')
     .addEntry('Panier', './assets/styles/js/Panier.js')
+    .addEntry('addPanier', './assets/styles/js/addPanier.js')
     .addEntry('showcheckboxes', './assets/styles/js/showcheckboxes.js')
+    .addEntry('vanilla-tilt', './assets/styles/js/vanilla-tilt.min.js')
+    .addEntry('vanilla-tilt-init', './assets/styles/js/vanilla-tilt-init.js')
     .addEntry('dropdown', './assets/styles/bootstrap/js/bootstrap.bundle.min.js')
     .addEntry('jquery', './assets/styles/jquery/jquery.min.js')
 

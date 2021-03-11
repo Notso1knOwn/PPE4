@@ -24,6 +24,13 @@ class Produit
     /**
      * @var string|null
      *
+     * @ORM\Column(name="marque", type="string", length=50, nullable=true)
+     */
+    private $marque;
+
+    /**
+     * @var string|null
+     *
      * @ORM\Column(name="libelle", type="string", length=50, nullable=true)
      */
     private $libelle;
@@ -38,7 +45,7 @@ class Produit
     /**
      * @var string|null
      *
-     * @ORM\Column(name="tarif", type="decimal", precision=19, scale=4, nullable=true)
+     * @ORM\Column(name="tarif", type="decimal", precision=19, scale=2, nullable=true)
      */
     private $tarif;
 
@@ -82,6 +89,17 @@ class Produit
     public function getIdProduit(): ?int
     {
         return $this->idProduit;
+    }
+
+    public function getMarque(): ?string
+    {
+        return $this->marque;
+    }
+
+    public function setMarque(?string $marque): self
+    {
+        $this->marque = $marque;
+        return $this;
     }
 
     public function getLibelle(): ?string
@@ -168,5 +186,18 @@ class Produit
         return $this;
     }
 
+    public function toJSON(){
+        $json = '{ 
+        "idProduit" : '.$this->idProduit.' ,
+        "marque" : "'.$this->marque.'" ,
+        "libelle" : "'.$this->libelle.'" ,
+        "description" : "'.$this->description.'" ,
+        "tarif" : "'.$this->tarif.'" ,
+        "stock" : '.$this->stock.' ,
+        "note" : "'.$this->note.'" ,
+        "lienImage" : "'.$this->lienImage.'" ,
+        "idCategorie" : '.$this->idCategorie.' }';
+        return $json;
+    }
 
 }

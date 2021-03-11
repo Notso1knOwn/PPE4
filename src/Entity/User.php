@@ -46,7 +46,7 @@ class User implements UserInterface
     /**
      * @var string|null
      *
-     * @ORM\Column(name="password", type="string", length=50, nullable=true)
+     * @ORM\Column(name="password", type="string", length=255, nullable=true)
      */
     private $password;
 
@@ -63,6 +63,13 @@ class User implements UserInterface
      * @ORM\Column(name="email", type="string", length=50, nullable=true)
      */
     private $email;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="date_enregistrement", type="date", nullable=true)
+     */
+    private $dateEnregistrement;
 
     /**
      * @var int

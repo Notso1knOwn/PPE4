@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}2TAK HARDWARE | Laptop{% endblock %}
 
+{% block title %}2TAK HARDWARE | Laptop{% endblock %}
 {% block body %}
 
     <div class="container mb-5">
@@ -20,12 +20,12 @@
 
             <div class="col-lg-3">
                 <h1 id="Catégorie">Catégorie</h1>
-                <div class="list-group">
+                <div class="list-group" id="categorie-container">
                     <form method="post" action="">
                         <!-- Formulaire Marque -->
                         <div class="list-group-item">
                             <div class="multiselect">
-                                <div class="selectBox form-group" onclick="showCheckboxes('Marque')">
+                                <div class="selectBox form-group">
                                     <div class="form-control">Marque</div>
                                     <div class="overSelect"></div>
                                 </div>
@@ -49,7 +49,7 @@
                         <!-- Formulaire Format -->
                         <div class="list-group-item">
                             <div class="multiselect">
-                                <div class="selectBox form-group" onclick="showCheckboxes('Format')">
+                                <div class="selectBox form-group">
                                     <div class="form-control">Format</div>
                                     <div class="overSelect"></div>
                                 </div>
@@ -71,7 +71,7 @@
                         <!-- Formulaire Processeur -->
                         <div class="list-group-item">
                             <div class="multiselect">
-                                <div class="selectBox form-group" onclick="showCheckboxes('Processeur')">
+                                <div class="selectBox form-group">
                                     <div class="form-control">Processeur</div>
                                     <div class="overSelect"></div>
                                 </div>
@@ -102,7 +102,7 @@
 
                         <div class="list-group-item">
                             <div class="multiselect">
-                                <div class="selectBox form-group" onclick="showCheckboxes('Carte_graphique')">
+                                <div class="selectBox form-group">
                                     <div class="form-control">Carte graphique</div>
                                     <div class="overSelect"></div>
                                 </div>
@@ -163,4 +163,11 @@
     </div>
     <!-- /.container -->
 
+{% endblock %}
+
+{% block javascriptsSupp %}
+    {{ encore_entry_script_tags('addPanier') }}
+    {{ encore_entry_script_tags('vanilla-tilt-init') }}
+    {{ encore_entry_script_tags('vanilla-tilt') }}
+    {{ encore_entry_script_tags('showcheckboxes') }}
 {% endblock %}

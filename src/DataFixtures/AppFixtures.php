@@ -107,7 +107,8 @@ class AppFixtures extends Fixture
         # region Produit
             $produit1 = new Produit();
             $produit1->setIdProduit(1);
-            $produit1->setLibelle('Asus ROG Strix G (G531GT-HN574T)');
+            $produit1->setMarque('Asus');
+            $produit1->setLibelle('ROG Strix G (G531GT-HN574T)');
             $produit1->setDescription('');
             $produit1->setTarif('1099.9900');
             $produit1->setStock(10);
@@ -118,68 +119,74 @@ class AppFixtures extends Fixture
 
             $produit2 = new Produit();
             $produit2->setIdProduit(2);
-            $produit2->setLibelle('test2');
+            $produit2->setMarque('Asus');
+            $produit2->setLibelle('ROG Huracan (G21CN-FR102T)');
             $produit2->setDescription('');
-            $produit2->setTarif('40.00');
-            $produit2->setStock(50);
-            $produit2->setNote('6.00');
+            $produit2->setTarif('1299.99');
+            $produit2->setStock(10);
+            $produit2->setNote('9.00');
             $produit2->setLienImage('');
-            $produit2->setIdCategorie(3);
+            $produit2->setIdCategorie(5);
             $manager->persist($produit2);
 
         $produit3 = new Produit();
         $produit3->setIdProduit(3);
-        $produit3->setLibelle('test3');
+        $produit3->setMarque('MSI');
+        $produit3->setLibelle('Trident A (9SD-664EU)');
         $produit3->setDescription('');
-        $produit3->setTarif('50.00');
-        $produit3->setStock(20);
-        $produit3->setNote('8.00');
+        $produit3->setTarif('1699.99');
+        $produit3->setStock(5);
+        $produit3->setNote('8.50');
         $produit3->setLienImage('');
-        $produit3->setIdCategorie(3);
+        $produit3->setIdCategorie(5);
         $manager->persist($produit3);
 
         $produit4 = new Produit();
         $produit4->setIdProduit(4);
-        $produit4->setLibelle('test4');
+        $produit4->setMarque('Apple');
+        $produit4->setLibelle('iMac 27 pouces Rétina 5K 2019');
         $produit4->setDescription('');
-        $produit4->setTarif('25.00');
-        $produit4->setStock(25);
-        $produit4->setNote('9.00');
+        $produit4->setTarif('1800');
+        $produit4->setStock(2);
+        $produit4->setNote('9.50');
         $produit4->setLienImage('');
-        $produit4->setIdCategorie(3);
+        $produit4->setIdCategorie(5);
         $manager->persist($produit4);
 
         $produit5 = new Produit();
         $produit5->setIdProduit(5);
-        $produit5->setLibelle('test5');
+        $produit5->setMarque('Apple');
+        $produit5->setLibelle('MacBook Pro 16 Touch Bar 1 To Argent (2019)');
         $produit5->setDescription('');
-        $produit5->setTarif('400.00');
-        $produit5->setStock(50);
-        $produit5->setNote('6.00');
+        $produit5->setTarif('3200');
+        $produit5->setStock(1);
+//        $produit5->setNote('6.00');
         $produit5->setLienImage('');
-        $produit5->setIdCategorie(2);
+        $produit5->setIdCategorie(4);
         $manager->persist($produit5);
 
         $produit6 = new Produit();
         $produit6->setIdProduit(6);
-        $produit6->setLibelle('test6');
+        $produit6->setMarque('MSI');
+        $produit6->setLibelle('GE75 8RE-068XFR Raider RGB');
         $produit6->setDescription('');
-        $produit6->setTarif('1200.00');
+        $produit6->setTarif('1149.99');
         $produit6->setStock(9);
-        $produit6->setNote('8.00');
+        $produit6->setNote('6.00');
         $produit6->setLienImage('');
-        $produit6->setIdCategorie(2);
+        $produit6->setIdCategorie(4);
         $manager->persist($produit6);
 
         $produit7 = new Produit();
         $produit7->setIdProduit(7);
-        $produit7->setLibelle('test7');
+        $produit7->setMarque('HP');
+        $produit7->setLibelle('Pavilion Gaming 690-0117nf (6ZM33EA)');
         $produit7->setDescription('');
-        $produit7->setTarif('2000.00');
-        $produit7->setStock(5);
-        $produit7->setNote('9.00');
+        $produit7->setTarif('799.99');
+        $produit7->setStock(7);
+        $produit7->setNote('5.50');
         $produit7->setLienImage('');
-        $produit7->setIdCategorie(2);
+        $produit7->setIdCategorie(5);
         $manager->persist($produit7);
         # endregion
 

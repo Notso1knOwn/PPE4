@@ -13,6 +13,8 @@ import './styles/css/login.css';
 import './styles/css/menu.css';
 import './styles/css/Ordinateur.css';
 import './styles/css/Select-checkbox.css';
+import './styles/css/cardProduit.css';
+import './styles/css/loader.css';
 
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.

@@ -3,6 +3,10 @@
   margin-top: 15px;
 }
 
+.list-group-item {
+  border: 1px solid #232323;
+}
+
 .selectBox {
   position: relative;
 }
@@ -28,6 +32,7 @@
 .checkboxes label {
   padding-left: 15px;
   display: block;
+  color: white;
 }
 
 .checkboxes input {
@@ -36,5 +41,6 @@
 }
 
 .checkboxes label:hover {
-  background-color: #ECECEC;
+  color: white;
+  background-color: transparent;
 }

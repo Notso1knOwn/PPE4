@@ -34,6 +34,20 @@
 .dropdown-menu{
   margin-top: 8px;
   min-width: 120px;
+  background-color: #131313 ;
+}
+
+.dropdown-item{
+  color: #6c757d;
+  outline: none;
+  cursor: pointer;
+  transition: .5s ;
+  /*font-weight: bold ;*/
+}
+
+.dropdown-item:hover{
+  color: white;
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {

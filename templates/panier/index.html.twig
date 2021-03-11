@@ -6,42 +6,86 @@
     <div class="container">
 
         <div class="row">
-            <h1 class="mx-auto mt-5">Votre Panier</h1>
+            <h1 class="mx-auto mt-5" id="h1Panier">Votre Panier</h1>
         </div>
 
         <div class="row">
             {% if app.session.get('panier') %}
-            <form class="form-group form_panier" action="#" method="post">
+            <form class="form-group form_panier" id="formPanier" action="{{ path('updatePanier') }}" method="post">
                 <table class="table table-bordered my-5">
                     <thead>
                     <tr>
                         <th scope="col">Produit</th>
                         <th scope="col">Quantité</th>
-                        <th scope="col">Prix</th>
+                        <th scope="col">Prix Unitaire</th>
+                        <th scope="col">Prix Total</th>
                         <th scope="col">Supprimer</th>
                     </tr>
                     </thead>
 
                     <tbody>
+                    {% set montantTotal = 0 %}
                     {% for produit in panier %}
+                        {% set montantTotal = montantTotal + produit[0].tarif * produit[1] %}
                     <tr>
-                        <th> <img src="{{ produit.LienImage}}" class="image-panier"> <p class="">{{ produit.libelle }}</p> </th>
-                        <th> <input type="number" min="0" max="{{ produit.stock }}" id="Quantite_{{ produit.id }}" class="form-control d-flex justify-content-center my-3" name="{{ produit.id }}" value="{{ produit.quantite }}" > </th>
-                        <th> <p class="d-flex justify-content-center my-3">{{ produit.prix }} €</p> </th>
-                        <th> <a href="{{ path('delProduitPanier') }}" class="d-flex justify-content-center my-3">
+                        <th>
+                            <img src="../{{ produit[0].lienImage }}" class="image-panier"> <p class="">{{ produit[0].libelle }}</p> </th>
+                        <th>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="number" min="0" max="{{ produit[0].stock }}" id="Quantite_{{ produit[0].idProduit }}" class="form-control d-flex justify-content-center my-3" name="updatePanier[{{ produit[0].idProduit }}]" value="{{ produit[1] }}" >
+                                    <input type="hidden" value="{{ produit[0].idProduit }}">
+                                    {% for message in app.flashes('error') %}
+                                        <p class="text-danger text-center">{{ message }}</p>
+                                    {% endfor %}
+                                </div>
+                                <div class="col-6">
+                                    <a href="{{ path('addPanier', {'id': produit[0].idProduit}) }}" class="d-flex justify-content-center my-3 float-left">
+                                        <img src="../Icones/icons8-plus-64.png" class="icone" >
+                                    </a>
+                                    <a href="{{ path('delProduitPanier', {'id': produit[0].idProduit}) }}" class="d-flex justify-content-center my-3">
+                                        <img src="../Icones/icons8-moins-64.png" class="icone" >
+                                    </a>
+                                </div>
+                                {% for message in app.flashes('error') %}
+                                        <p class="text-danger text-center">{{ message }}</p>
+                                {% endfor %}
+                            </div>
+                        </th>
+                        <th> <p class="d-flex justify-content-center my-3">{{ produit[0].tarif }} €</p> </th>
+                        <th> <p class="d-flex justify-content-center my-3">{{ produit[0].tarif * produit[1] }} €</p> </th>
+                        <th> <a href="{{ path('delProduitPanier', {'id': produit[0].idProduit}) }}" class="d-flex justify-content-center my-3">
                                 <img src="../Icones/icons8-supprimer-pour-toujours-64.png" class="icone" ></a> </th>
                     </tr>
                     {% endfor %}
                     </tbody>
                 </table>
-                <input class="form-control" type="submit" name="Valider" value="Valider">
-                {% else %}
-                <p>Il n'y a pas de produit dans votre panier.</p>
-                {% endif %}
+                <div class="row align-items-center">
+                    <input class="form-control col-3" id="submitPanier" type="submit" name="Valider" value="Actualiser le panier">
+                    <span class="offset-6 col-3">Montant Total:  {{ montantTotal }} € </span>
+                </div>
             </form>
+            {% else %}
+                <p>Il n'y a pas de produit dans votre panier.</p>
+            {% endif %}
         </div>
         <!-- row -->
 
     </div>
     <!-- container -->
+{% endblock %}
+
+{% block footer %}
+    <!-- Footer -->
+    <footer id="footer" class="py-5 bg-transparent fixed-bottom">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; 2TAK Hardware 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+{% endblock %}
+
+{% block javascriptsSupp %}
+    {{ encore_entry_script_tags('Panier') }}
 {% endblock %}
