@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * PersonnelFixtures
@@ -67,7 +68,7 @@ class User implements UserInterface
     /**
      * @var string|null
      *
-     * @ORM\Column(name="date_enregistrement", type="date", nullable=true)
+     * @ORM\Column(name="date_enregistrement", type="string", nullable=true)
      */
     private $dateEnregistrement;
 
@@ -147,6 +148,24 @@ class User implements UserInterface
 
         return $this;
     }
+
+    /**
+     * @return string|null
+     */
+    public function getDateEnregistrement(): ?string
+    {
+        return $this->dateEnregistrement;
+    }
+
+    /**
+     * @param string|null $dateEnregistrement
+     */
+    public function setDateEnregistrement(?string $dateEnregistrement): void
+    {
+        $this->dateEnregistrement = $dateEnregistrement;
+    }
+
+
 
     public function getIdProfil(): ?int
     {

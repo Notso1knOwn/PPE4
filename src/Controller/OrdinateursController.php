@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 
+use App\Repository\AvisProduitRepository;
 use App\Repository\ProduitRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,25 +14,52 @@ class OrdinateursController extends AbstractController
     /**
      * @Route("/tour", name="tour")
      */
-    public function tourRoute(ProduitRepository $produitRepository): Response
+    public function tourRoute(ProduitRepository $produitRepository, AvisProduitRepository $avisProduitRepository): Response
     {
+        $produits = $produitRepository->findByIdCategorie(2);
+
+        foreach ($produits as $produit){
+            $avisProduit = $avisProduitRepository->findBy(array('idProduit'=> $produit->getIdProduit()));
+            $noteAvis = null;
+            foreach ($avisProduit as $unAvis){
+                $noteAvis += $unAvis->getNote();
+            }
+            if (count($avisProduit) > 0){
+                $noteAvis /= count($avisProduit);
+            }
+            $produit->setNote($noteAvis);
+        }
 
         return $this->render('ordinateurs/tour.html.twig', [
             'controller_name' => 'Ordinateur',
             'page_name' => 'Tour',
-            'produits' => $produitRepository->findByIdCategorie(5),
+            'produits' => $produits
         ]);
     }
 
     /**
      * @Route("/laptop", name="laptop")
      */
-    public function laptopRoute(ProduitRepository $produitRepository): Response
+    public function laptopRoute(ProduitRepository $produitRepository, AvisProduitRepository $avisProduitRepository): Response
     {
+        $produits = $produitRepository->findByIdCategorie(1);
+
+        foreach ($produits as $produit){
+            $avisProduit = $avisProduitRepository->findBy(array('idProduit'=> $produit->getIdProduit()));
+            $noteAvis = null;
+            foreach ($avisProduit as $unAvis){
+                $noteAvis += $unAvis->getNote();
+            }
+            if (count($avisProduit) > 0){
+                $noteAvis /= count($avisProduit);
+            }
+            $produit->setNote($noteAvis);
+        }
+
         return $this->render('ordinateurs/laptop.html.twig', [
             'controller_name' => 'Ordinateur',
             'page_name' => 'Laptop',
-            'produits' => $produitRepository->findByIdCategorie(4),
+            'produits' => $produits
         ]);
     }
 

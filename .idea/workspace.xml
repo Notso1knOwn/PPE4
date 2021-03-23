@@ -2,37 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c20dedb-004e-432a-a75c-6bb3e678ea5b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/styles/js/addPanier.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Ordinateur/Laptop/GE75 8RE-068XFR Raider RGB.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Ordinateur/Laptop/MacBook Pro 16 Touch Bar 1 To Argent (2019).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Ordinateur/Laptop/TUF Gaming (505DD-AL062T).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Ordinateur/Laptop/VivoBook 15 (F555QA-DM396T).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Ordinateur/Tour/Aegis 3 (8RC-011FR).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Ordinateur/Tour/Pavilion Gaming 690-0117nf (6ZM33EA).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Ordinateur/Tour/Pavilion TP01-0070nf.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Ordinateur/Tour/ROG Huracan (G21CN-FR102T).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Ordinateur/Tour/Trident A (9SD-664EU).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Ordinateur/Tour/iMac 27 pouces Rétina 5K 2019.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Images/Ordinateur/Tour/iMac Pro 27 pouces Rétina 5K.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/css/Ordinateur.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/css/Ordinateur.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/css/Select-checkbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/css/Select-checkbox.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/css/menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/Panier.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/Panier.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/showcheckboxes.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/showcheckboxes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/OrdinateursController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/OrdinateursController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PanierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PanierController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Contenir.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Contenir.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProduitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProduitType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/CardProduit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/CardProduit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ordinateurs/laptop.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ordinateurs/laptop.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ordinateurs/tour.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ordinateurs/tour.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/panier/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/panier/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -170,9 +149,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../boutique" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -185,16 +165,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\a.masvidal\PhpstormProjects\PPE4\templates\security" />
-      <recent name="C:\Users\a.masvidal\PhpstormProjects\PPE4\templates\ordinateurs\laptop" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\a.masvidal\PhpstormProjects\PPE4\public\REDIPS_drag-master\drag_and_drop" />
       <recent name="C:\Users\a.masvidal\PhpstormProjects\PPE4\public" />
       <recent name="C:\Users\a.masvidal\PhpstormProjects\PPE4" />
       <recent name="C:\Users\a.masvidal\PhpstormProjects\PPE4\templates\ordinateurs" />
       <recent name="C:\Users\a.masvidal\PhpstormProjects\PPE4\templates\ordinateurs\tour" />
-      <recent name="C:\Users\a.masvidal\PhpstormProjects\PPE4\assets\styles" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\a.masvidal\PhpstormProjects\PPE4\public\REDIPS_drag-master\drag_and_drop" />
+      <recent name="C:\Users\a.masvidal\PhpstormProjects\PPE4\templates\security" />
+      <recent name="C:\Users\a.masvidal\PhpstormProjects\PPE4\templates\ordinateurs\laptop" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -220,7 +201,11 @@
       <workItem from="1614768467240" duration="12000000" />
       <workItem from="1614840965059" duration="9915000" />
       <workItem from="1615379678701" duration="11414000" />
-      <workItem from="1615446425545" duration="23941000" />
+      <workItem from="1615446425545" duration="25054000" />
+      <workItem from="1615905576786" duration="4226000" />
+      <workItem from="1615973095879" duration="17164000" />
+      <workItem from="1616050591901" duration="22866000" />
+      <workItem from="1616503844703" duration="2977000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1605694932858</created>
@@ -292,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608219293213</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update">
+      <created>1615474252293</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1615474252293</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,54 +300,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1614773140040" />
-    <state x="716" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606920713557">
+    <state x="753" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1616081034190">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="716" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606920713557" />
-    <state x="765" y="202" key="#com.intellij.ide.util.MemberChooser" timestamp="1606833542431">
+    <state x="753" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1616081034190" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616057155095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="202" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606833542431" />
-    <state x="577" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606921366085">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1616057155095" />
+    <state x="585" y="97" key="CommitChangelistDialog2" timestamp="1615474251044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="577" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1606921366085" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608212165362">
+    <state x="585" y="97" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1615474251044" />
+    <state x="92" y="92" width="1736" height="856" key="DirDiffDialog" timestamp="1616082489710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608212165362" />
-    <state x="585" y="97" key="CommitChangelistDialog2" timestamp="1608219292579">
+    <state x="92" y="92" width="1736" height="856" key="DirDiffDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1616082489710" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1616080841122">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="97" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608219292579" />
-    <state x="92" y="92" width="1736" height="856" key="DirDiffDialog" timestamp="1615471585929">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="DirDiffDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1615471585929" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1615471593306">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1615471593306" />
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1616080841122" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1614773190878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1614773190878" />
-    <state x="721" y="243" key="NewPhpClassDialog" timestamp="1607007990707">
+    <state x="540" y="255" key="IDE.errors.dialog" timestamp="1615474307307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="721" y="243" key="NewPhpClassDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1607007990707" />
+    <state x="540" y="255" key="IDE.errors.dialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1615474307307" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1614768558273">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1614768558273" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608219295625">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1615474270677">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1608219295625" />
-    <state x="-1815" y="0" width="1580" height="1027" key="dock-window-1" timestamp="1614781939600">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1615474270677" />
+    <state x="-1529" y="0" width="1545" height="689" maximized="true" key="dock-window-1" timestamp="1615983328998">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1815" y="0" width="1580" height="1027" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1614781939600" />
+    <state x="-1529" y="0" width="1545" height="689" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1615983328998" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1608043352414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

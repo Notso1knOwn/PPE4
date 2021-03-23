@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Contenir
  *
- * @ORM\Table(name="contenir", indexes={@ORM\Index(name="Id_Commande", columns={"Id_Commande"})})
+ * @ORM\Table(name="contenir", indexes={@ORM\Index(name="Id_Commande", columns={"Id_Commande"}), @ORM\Index(name="Id_Produit", columns={"Id_Produit"})})
  * @ORM\Entity(repositoryClass=App\Repository\ContenirRepository::class)
  */
 class Contenir

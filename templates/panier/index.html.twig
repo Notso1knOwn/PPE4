@@ -17,7 +17,7 @@
                     <tr>
                         <th scope="col">Produit</th>
                         <th scope="col">Quantité</th>
-                        <th scope="col">Prix Unitaire</th>
+                        <th scope="col" class="d-none d-lg-block">Prix Unitaire</th>
                         <th scope="col">Prix Total</th>
                         <th scope="col">Supprimer</th>
                     </tr>
@@ -32,14 +32,14 @@
                             <img src="../{{ produit[0].lienImage }}" class="image-panier"> <p class="">{{ produit[0].libelle }}</p> </th>
                         <th>
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-lg-6 col-sm-12">
                                     <input type="number" min="0" max="{{ produit[0].stock }}" id="Quantite_{{ produit[0].idProduit }}" class="form-control d-flex justify-content-center my-3" name="updatePanier[{{ produit[0].idProduit }}]" value="{{ produit[1] }}" >
                                     <input type="hidden" value="{{ produit[0].idProduit }}">
                                     {% for message in app.flashes('error') %}
                                         <p class="text-danger text-center">{{ message }}</p>
                                     {% endfor %}
                                 </div>
-                                <div class="col-6">
+                                <div class="col-lg-6 d-none d-lg-block">
                                     <a href="{{ path('addPanier', {'id': produit[0].idProduit}) }}" class="d-flex justify-content-center my-3 float-left">
                                         <img src="../Icones/icons8-plus-64.png" class="icone" >
                                     </a>
@@ -52,7 +52,7 @@
                                 {% endfor %}
                             </div>
                         </th>
-                        <th> <p class="d-flex justify-content-center my-3">{{ produit[0].tarif }} €</p> </th>
+                        <th class="d-none d-lg-block"> <p class=" d-flex justify-content-center my-3">{{ produit[0].tarif }} €</p> </th>
                         <th> <p class="d-flex justify-content-center my-3">{{ produit[0].tarif * produit[1] }} €</p> </th>
                         <th> <a href="{{ path('delProduitPanier', {'id': produit[0].idProduit}) }}" class="d-flex justify-content-center my-3">
                                 <img src="../Icones/icons8-supprimer-pour-toujours-64.png" class="icone" ></a> </th>
@@ -61,8 +61,8 @@
                     </tbody>
                 </table>
                 <div class="row align-items-center">
-                    <input class="form-control col-3" id="submitPanier" type="submit" name="Valider" value="Actualiser le panier">
-                    <span class="offset-6 col-3">Montant Total:  {{ montantTotal }} € </span>
+                    <input class="form-control col-lg-3 col-sm-6" id="submitPanier" type="submit" name="Valider" value="Actualiser le panier">
+                    <span class="offset-lg-6 col-lg-3 offset-sm-2 col-sm-4">Montant Total:  {{ montantTotal }} € </span>
                 </div>
             </form>
             {% else %}

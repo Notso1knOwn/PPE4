@@ -22,25 +22,60 @@ class Client
     private $idClient;
 
     /**
-     * @var string|null
+     * @var string
      *
-     * @ORM\Column(name="prenom", type="string", length=50, nullable=true)
+     * @ORM\Column(name="prenom", type="string", length=50, nullable=false)
      */
     private $prenom;
 
     /**
-     * @var string|null
+     * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=50, nullable=true)
+     * @ORM\Column(name="nom", type="string", length=50, nullable=false)
      */
     private $nom;
 
     /**
-     * @var string|null
+     * @var string
      *
-     * @ORM\Column(name="email", type="string", length=50, nullable=true)
+     * @ORM\Column(name="email", type="string", length=50, nullable=false)
      */
     private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="adresse_fac", type="string", length=255, nullable=false)
+     */
+    private $adresseFac;
+
+    /**
+     * @var string|null
+     *
+     * @ORM\Column(name="adr_complement_fac", type="string", length=255, nullable=true)
+     */
+    private $adrComplementFac;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cp_fac", type="string", length=10, nullable=false)
+     */
+    private $cpFac;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ville_fac", type="string", length=50, nullable=false)
+     */
+    private $villeFac;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="pays_fac", type="string", length=50, nullable=false)
+     */
+    private $paysFac;
 
     /**
      * @var string|null
@@ -67,51 +102,131 @@ class Client
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getPrenom(): ?string
+    public function getPrenom(): string
     {
         return $this->prenom;
     }
 
     /**
-     * @param string|null $prenom
+     * @param string $prenom
      */
-    public function setPrenom(?string $prenom): void
+    public function setPrenom(string $prenom): void
     {
         $this->prenom = $prenom;
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getNom(): ?string
+    public function getNom(): string
     {
         return $this->nom;
     }
 
     /**
-     * @param string|null $nom
+     * @param string $nom
      */
-    public function setNom(?string $nom): void
+    public function setNom(string $nom): void
     {
         $this->nom = $nom;
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getEmail(): ?string
+    public function getEmail(): string
     {
         return $this->email;
     }
 
     /**
-     * @param string|null $email
+     * @param string $email
      */
-    public function setEmail(?string $email): void
+    public function setEmail(string $email): void
     {
         $this->email = $email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAdresseFac(): string
+    {
+        return $this->adresseFac;
+    }
+
+    /**
+     * @param string $adresseFac
+     */
+    public function setAdresseFac(string $adresseFac): void
+    {
+        $this->adresseFac = $adresseFac;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getAdrComplementFac(): ?string
+    {
+        return $this->adrComplementFac;
+    }
+
+    /**
+     * @param string|null $adrComplementFac
+     */
+    public function setAdrComplementFac(?string $adrComplementFac): void
+    {
+        $this->adrComplementFac = $adrComplementFac;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCpFac(): string
+    {
+        return $this->cpFac;
+    }
+
+    /**
+     * @param string $cpFac
+     */
+    public function setCpFac(string $cpFac): void
+    {
+        $this->cpFac = $cpFac;
+    }
+
+    /**
+     * @return string
+     */
+    public function getVilleFac(): string
+    {
+        return $this->villeFac;
+    }
+
+    /**
+     * @param string $villeFac
+     */
+    public function setVilleFac(string $villeFac): void
+    {
+        $this->villeFac = $villeFac;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPaysFac(): string
+    {
+        return $this->paysFac;
+    }
+
+    /**
+     * @param string $paysFac
+     */
+    public function setPaysFac(string $paysFac): void
+    {
+        $this->paysFac = $paysFac;
     }
 
     /**
