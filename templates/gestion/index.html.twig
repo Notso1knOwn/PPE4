@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}2TAK HARDWARE | Gestion{% endblock %}
+
+{% block body %}
+    {% set url_utilisateur = ea_url()
+        .setDashboard('App\\Controller\\Admin\\DashboardController')
+        .setController('App\\Controller\\Admin\\ProduitCrudController')
+        .setAction('index') %}
+    {% set url_client = ea_url()
+        .setDashboard('App\\Controller\\Admin\\DashboardController')
+        .setController('App\\Controller\\Admin\\ClientCrudController')
+        .setAction('index') %}
+    {% set url_categorie = ea_url()
+        .setDashboard('App\\Controller\\Admin\\DashboardController')
+        .setController('App\\Controller\\Admin\\CategorieCrudController')
+        .setAction('index') %}
+    {% set url_produit = ea_url()
+        .setDashboard('App\\Controller\\Admin\\DashboardController')
+        .setController('App\\Controller\\Admin\\ProduitCrudController')
+        .setAction('index') %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 id="h1Gestion" class="my-5">Gestion</h1>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-sm-12 border-danger my-5">
+            <h2 class="text-center">Gestion des utilisateurs</h2>
+            <canvas class="myChart"></canvas>
+            {% set url_utilisateur = ea_url()
+                .setDashboard('App\\Controller\\Admin\\DashboardController')
+                .setController('App\\Controller\\Admin\\ProduitCrudController')
+                .setAction('index') %}
+            <a href="{{ url_utilisateur }}" class="form-control text-center text-decoration-none my-5">Modifier les Utilisateurs</a>
+        </div>
+        <div class="col-lg-6 col-sm-12 border-danger my-5">
+            <h2 class="text-center mb-2">Gestion des clients</h2>
+            <canvas class="myChart"></canvas>
+            <a href="{{ path('client_index') }}" class="form-control text-center text-decoration-none my-5">Modifier les Clients</a>
+        </div>
+        <div class="col-lg-6 col-sm-12 border-danger my-5">
+            <h2 class="text-center mb-2">Gestion des categories</h2>
+            <canvas class="myChart"></canvas>
+            <a href="{{ path('categorie_index') }}" class="form-control text-center text-decoration-none my-5">Modifier les Catégories</a>
+        </div>
+        <div class="col-lg-6 col-sm-12 border-danger my-5">
+            <h2 class="text-center mb-2">Gestion des produits</h2>
+            <canvas class="myChart"></canvas>
+            <a href="{{ path('produit_index') }}" class="form-control text-center text-decoration-none my-5">Modifier les produits</a>
+        </div>
+        <div class="col-lg-6 col-sm-12 border-danger my-5">
+            <h2 class="text-center mb-2">Gestion des ventes</h2>
+            <canvas class="myChart"></canvas>
+        </div>
+        <div class="col-lg-6 col-sm-12 border-danger my-5">
+            <h2 class="text-center mb-2">Gestion du jeu d'essai</h2>
+            <canvas class="myChart"></canvas>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript">
+        var charts = document.getElementsByClassName('myChart');
+        Array.prototype.forEach.call(charts, function(element) {
+            var chart = new Chart(element.getContext('2d'), {
+                // The type of chart we want to create
+                type: 'doughnut',
+
+                // The data for our dataset
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    datasets: [{
+                        label: 'Satistiques inscription utilisateur',
+                        backgroundColor: [
+                            'rgb(200, 32, 255)',
+                            'rgb(221, 26, 164)',
+                            'rgb(237, 22, 93)',
+                            'rgb(254, 17, 17)',
+                            'rgb(255, 65, 19)',
+                            'rgb(255, 113, 20)',
+                            'rgb(255, 158, 22)'
+                        ],
+                        borderColor: 'rgb(19,19,19)',
+                        data: [0, 10, 5, 2, 20, 30, 45]
+                    }]
+                },
+
+                // Configuration options go here
+                options: {}
+            });
+        });
+
+    </script>
+{% endblock %}

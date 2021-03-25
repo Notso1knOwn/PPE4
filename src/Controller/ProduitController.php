@@ -52,7 +52,7 @@ class ProduitController extends AbstractController
     }
 
     /**
-     * @Route("/{idProduit}", name="produit_show", methods={"GET"})
+     * @Route("/{id}", name="produit_show", methods={"GET"})
      */
     public function show(Produit $produit): Response
     {
@@ -62,7 +62,7 @@ class ProduitController extends AbstractController
     }
 
     /**
-     * @Route("/{idProduit}/edit", name="produit_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="produit_edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Produit $produit): Response
     {

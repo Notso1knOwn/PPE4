@@ -6,7 +6,7 @@
             </h5>
             <p class="card-marque">{{ produit.getMarque }}</p>
 
-            <img class="image" src='../Images/{{ controller_name }}/{{ page_name }}/{{ produit.getLibelle }}.png' alt="">
+            <img class="image" src='../Images/Produits/{{ produit.getLienImage }}' alt="">
             <div class="card-circle"></div>
 
             <div class="row d-flex justify-content-center avis">
@@ -24,7 +24,7 @@
             <div class="row prix d-flex mt-3">
                 <!-- Début Ajout panier -->
                 {% if app.user %}
-                <a class="Panier card-left mr-3" href="{{ path('addPanier', {'id': produit.getIdProduit}) }}">
+                <a class="Panier card-left mr-3" href="{{ path('addPanier', {'id': produit.getId}) }}">
                     <img src="../Icones/icons8-ajouter-au-panier-64.png" class="icone"></a>
                 {% endif %}
                 <!-- Fin Ajout panier -->

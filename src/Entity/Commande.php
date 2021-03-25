@@ -7,19 +7,17 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Commande
  *
- * @ORM\Table(name="commande", indexes={@ORM\Index(name="Id_Etat_Commande", columns={"Id_Etat_Commande"}), @ORM\Index(name="Id_Personnel", columns={"Id_Personnel"}), @ORM\Index(name="Id_Client", columns={"Id_Client"})})
+ * @ORM\Table(name="commande")
  * @ORM\Entity(repositoryClass=App\Repository\CommandeRepository::class)
  */
 class Commande
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="Id_Commande", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      */
-    private $idCommande;
+    private $id;
 
     /**
      * @var \DateTime
@@ -29,40 +27,37 @@ class Commande
     private $dateCommande = 'CURRENT_TIMESTAMP';
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="Id_Etat_Commande", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity=EtatCommande::class)
+     * @ORM\JoinColumn(nullable=false)
      */
     private $idEtatCommande;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="Id_Client", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity=Client::class)
+     * @ORM\JoinColumn(nullable=false)
      */
     private $idClient;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="Id_Personnel", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity=User::class)
+     * @ORM\JoinColumn(nullable=false)
      */
     private $idPersonnel;
 
     /**
-     * @return int
+     * @return mixed
      */
-    public function getIdCommande(): int
+    public function getId()
     {
-        return $this->idCommande;
+        return $this->id;
     }
 
     /**
-     * @param int $idCommande
+     * @param mixed $id
      */
-    public function setIdCommande(int $idCommande): void
+    public function setId($id): void
     {
-        $this->idCommande = $idCommande;
+        $this->id = $id;
     }
 
     /**
@@ -81,53 +76,42 @@ class Commande
         $this->dateCommande = $dateCommande;
     }
 
-    /**
-     * @return int
-     */
-    public function getIdEtatCommande(): int
+
+    public function getIdEtatCommande(): ?EtatCommande
     {
         return $this->idEtatCommande;
     }
 
-    /**
-     * @param int $idEtatCommande
-     */
-    public function setIdEtatCommande(int $idEtatCommande): void
+
+    public function setIdEtatCommande(?EtatCommande $idEtatCommande): self
     {
         $this->idEtatCommande = $idEtatCommande;
     }
 
-    /**
-     * @return int
-     */
-    public function getIdClient(): int
+    public function getIdClient(): ?Client
     {
         return $this->idClient;
     }
 
-    /**
-     * @param int $idClient
-     */
-    public function setIdClient(int $idClient): void
+
+    public function setIdClient(?Client $idClient): self
     {
         $this->idClient = $idClient;
     }
 
-    /**
-     * @return int
-     */
-    public function getIdPersonnel(): int
+
+    public function getIdPersonnel(): ?User
     {
         return $this->idPersonnel;
     }
 
-    /**
-     * @param int $idPersonnel
-     */
-    public function setIdPersonnel(int $idPersonnel): void
+
+    public function setIdPersonnel(?User $idPersonnel): self
     {
         $this->idPersonnel = $idPersonnel;
     }
+
+
 
 
 

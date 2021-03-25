@@ -13,13 +13,11 @@ use Doctrine\ORM\Mapping as ORM;
 class Categorie
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="Id_Categorie", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      */
-    private $idCategorie;
+    private $id;
 
     /**
      * @var string|null
@@ -81,6 +79,27 @@ class Categorie
     public function setDescriptif(?string $descriptif): void
     {
         $this->descriptif = $descriptif;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+    public function __toString(): string
+    {
+        return $this->libelle;
     }
 
 

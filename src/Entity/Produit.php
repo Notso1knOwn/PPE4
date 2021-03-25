@@ -7,19 +7,17 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Produit
  *
- * @ORM\Table(name="produit", indexes={@ORM\Index(name="Id_Categorie", columns={"Id_Categorie"})})
+ * @ORM\Table(name="produit")
  * @ORM\Entity(repositoryClass=App\Repository\ProduitRepository::class)
  */
 class Produit
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="Id_Produit", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      */
-    private $idProduit;
+    private $id;
 
     /**
      * @var string|null
@@ -71,24 +69,14 @@ class Produit
     private $lienImage;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="Id_Categorie", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity=Categorie::class)
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $idCategorie;
+    private $id_categorie;
 
-    /**
-     * @param int $idProduit
-     */
-    public function setIdProduit(int $idProduit): void
+    public function getId(): ?int
     {
-        $this->idProduit = $idProduit;
-    }
-
-
-    public function getIdProduit(): ?int
-    {
-        return $this->idProduit;
+        return $this->id;
     }
 
     public function getMarque(): ?string
@@ -174,21 +162,21 @@ class Produit
         return $this;
     }
 
-    public function getIdCategorie(): ?int
+    public function getIdCategorie(): ?Categorie
     {
-        return $this->idCategorie;
+        return $this->id_categorie;
     }
 
-    public function setIdCategorie(int $idCategorie): self
+    public function setIdCategorie(?Categorie $id_categorie): self
     {
-        $this->idCategorie = $idCategorie;
+        $this->id_categorie = $id_categorie;
 
         return $this;
     }
 
     public function toJSON(){
         $json = '{ 
-        "idProduit" : '.$this->idProduit.' ,
+        "id" : '.$this->id.' ,
         "marque" : "'.$this->marque.'" ,
         "libelle" : "'.$this->libelle.'" ,
         "description" : "'.$this->description.'" ,
@@ -196,8 +184,14 @@ class Produit
         "stock" : '.$this->stock.' ,
         "note" : "'.$this->note.'" ,
         "lienImage" : "'.$this->lienImage.'" ,
-        "idCategorie" : '.$this->idCategorie.' }';
+        "id_ategorie_id" : '.$this->id_categorie.' }';
         return $json;
     }
+
+    public function __toString()
+    {
+        return $this->libelle;
+    }
+
 
 }

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+#cardContainer
+{
+  transform-style: preserve-3d;
+}
+
+.card-container
+{
+  height: 400px;
+  background-color: #232323!important;
+  transform-style: preserve-3d;
+  color: white;
+  border-radius: 20px;
+}
+
+.image{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 200px;
+  z-index: 11;
+  transition: 0.5s;
+  transform-style:preserve-3d;
+  transform: translate3d(-50%,-50%,50px);
+}
+
+.card-product-name{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Poppins',sans-serif;
+  font-weight: bolder;
+  letter-spacing: .2rem;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,75px);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.card-marque
+{
+  position: absolute;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 900;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card-right{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.card-container .row{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: 'Poppins',sans-serif;
+  letter-spacing: .2rem;
+  font-weight: bolder;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,75px);
+  opacity: 0;
+  z-index: 10;
+  transition: 0.5s;
+}
+
+.avis{
+  margin-bottom: 40px;
+  transition: 0.5s;
+}
+
+.card-circle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-image: linear-gradient(120deg, rgba(255,151,0,0.5) 0%, rgba(254,81,225,0.5) 100%);
+  transform-style: preserve-3d;
+  transform: translate3d(-50%,-50%,50px);
+  opacity: 0;
+  z-index: 10;
+  transition: 0.5s;
+}
+
+
+.card-container:hover .card-marque
+{
+  opacity: 0.04;
+}
+
+.card-container:hover .card-product-name
+{
+  top: 20px;
+  opacity: 1;
+}
+
+.card-container:hover .row
+{
+  bottom: 20px;
+  opacity: 1;
+}
+
+.card-container:hover .card-circle{
+  opacity: 1;
+}
+
+.card-container:hover .image{
+  transform: translate3d(-50%,-50%,100px) rotate(-5deg);
+  opacity: 1;
+}

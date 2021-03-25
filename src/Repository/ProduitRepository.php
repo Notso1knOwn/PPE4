@@ -25,7 +25,7 @@ class ProduitRepository extends ServiceEntityRepository
     public function findByIdCategorie($value)
     {
         return $this->createQueryBuilder('p')
-            ->andWhere('p.idCategorie = :val')
+            ->andWhere('p.id_categorie = :val')
             ->setParameter('val', $value)
             ->getQuery()
             ->getResult()
@@ -35,7 +35,7 @@ class ProduitRepository extends ServiceEntityRepository
     public function findByIdProduit($value)
     {
         return $this->createQueryBuilder('p')
-            ->andWhere('p.idProduit = :val')
+            ->andWhere('p.id = :val')
             ->setParameter('val', $value)
             ->getQuery()
             ->getResult()

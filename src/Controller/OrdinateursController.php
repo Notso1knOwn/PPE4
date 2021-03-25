@@ -19,7 +19,7 @@ class OrdinateursController extends AbstractController
         $produits = $produitRepository->findByIdCategorie(2);
 
         foreach ($produits as $produit){
-            $avisProduit = $avisProduitRepository->findBy(array('idProduit'=> $produit->getIdProduit()));
+            $avisProduit = $avisProduitRepository->findBy(array('id'=> $produit->getId()));
             $noteAvis = null;
             foreach ($avisProduit as $unAvis){
                 $noteAvis += $unAvis->getNote();
@@ -45,7 +45,7 @@ class OrdinateursController extends AbstractController
         $produits = $produitRepository->findByIdCategorie(1);
 
         foreach ($produits as $produit){
-            $avisProduit = $avisProduitRepository->findBy(array('idProduit'=> $produit->getIdProduit()));
+            $avisProduit = $avisProduitRepository->findBy(array('id'=> $produit->getId()));
             $noteAvis = null;
             foreach ($avisProduit as $unAvis){
                 $noteAvis += $unAvis->getNote();

@@ -7,40 +7,47 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Contenir
  *
- * @ORM\Table(name="contenir", indexes={@ORM\Index(name="Id_Commande", columns={"Id_Commande"}), @ORM\Index(name="Id_Produit", columns={"Id_Produit"})})
  * @ORM\Entity(repositoryClass=App\Repository\ContenirRepository::class)
  */
 class Contenir
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="Id_Commande", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Commande::class)
+     * @ORM\JoinColumn(nullable=false)
      */
     private $idCommande;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="Id_Produit", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\ManyToOne(targetEntity=Produit::class)
+     * @ORM\JoinColumn(nullable=false)
      */
     private $idProduit;
 
     /**
      * @var int|null
      *
-     * @ORM\Column(name="quantite", type="integer", nullable=true)
+     * @ORM\Column(name="quantite", type="integer", nullable=false)
      */
     private $quantite;
 
     /**
+     * @var double
+     *
+     * @ORM\Column(name="tarif", type="decimal", precision=15, scale=2, nullable=false)
+     */
+    private $tarif;
+
+    /**
      * @return int
      */
-    public function getIdCommande(): int
+    public function getIdCommande(): ?Commande
     {
         return $this->idCommande;
     }
@@ -48,7 +55,7 @@ class Contenir
     /**
      * @param int $idCommande
      */
-    public function setIdCommande(int $idCommande): void
+    public function setIdCommande(?Commande $idCommande): self
     {
         $this->idCommande = $idCommande;
     }
@@ -56,7 +63,7 @@ class Contenir
     /**
      * @return int
      */
-    public function getIdProduit(): int
+    public function getIdProduit(): ?Produit
     {
         return $this->idProduit;
     }
@@ -64,7 +71,7 @@ class Contenir
     /**
      * @param int $idProduit
      */
-    public function setIdProduit(int $idProduit): void
+    public function setIdProduit(?Produit $idProduit): self
     {
         $this->idProduit = $idProduit;
     }
@@ -84,6 +91,39 @@ class Contenir
     {
         $this->quantite = $quantite;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return float
+     */
+    public function getTarif(): float
+    {
+        return $this->tarif;
+    }
+
+    /**
+     * @param float $tarif
+     */
+    public function setTarif(float $tarif): void
+    {
+        $this->tarif = $tarif;
+    }
+
 
 
 }

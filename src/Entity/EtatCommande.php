@@ -13,13 +13,11 @@ use Doctrine\ORM\Mapping as ORM;
 class EtatCommande
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="Id_Etat_Commande", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      */
-    private $idEtatCommande;
+    private $id;
 
     /**
      * @var string|null
@@ -36,19 +34,19 @@ class EtatCommande
     private $descriptif;
 
     /**
-     * @return int
+     * @return mixed
      */
-    public function getIdEtatCommande(): int
+    public function getId()
     {
-        return $this->idEtatCommande;
+        return $this->id;
     }
 
     /**
-     * @param int $idEtatCommande
+     * @param mixed $id
      */
-    public function setIdEtatCommande(int $idEtatCommande): void
+    public function setId($id): void
     {
-        $this->idEtatCommande = $idEtatCommande;
+        $this->id = $id;
     }
 
     /**
@@ -83,6 +81,10 @@ class EtatCommande
         $this->descriptif = $descriptif;
     }
 
+    public function __toString()
+    {
+        return $this->libelle;
+    }
 
 
 }

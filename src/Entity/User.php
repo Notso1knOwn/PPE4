@@ -15,13 +15,11 @@ use Symfony\Component\Validator\Constraints as Assert;
 class User implements UserInterface
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="Id_Personnel", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      */
-    private $idPersonnel;
+    private $id;
 
     /**
      * @var string|null
@@ -84,9 +82,12 @@ class User implements UserInterface
      */
     private $roles = [];
 
-    public function getIdPersonnel(): ?int
+    /**
+     * @return mixed
+     */
+    public function getId()
     {
-        return $this->idPersonnel;
+        return $this->id;
     }
 
     public function getPrenom(): ?string
@@ -238,10 +239,16 @@ class User implements UserInterface
         return (string) $this->email;
     }
 
+    public function __toString()
+    {
+        return $this->nom.' '.$this->prenom;
+    }
+
+
     public function __serialize(): array
     {
         return [
-            $this->idPersonnel,
+            $this->id,
             $this->nom,
             $this->prenom,
             $this->pseudo,
@@ -253,7 +260,7 @@ class User implements UserInterface
 
     public function __unserialize(array $data): void
     {
-        list($this->idPersonnel,
+        list($this->id,
             $this->nom,
             $this->prenom,
             $this->pseudo,

@@ -21,10 +21,8 @@ class ProduitType extends AbstractType
             ->add('stock')
             ->add('note')
             ->add('lienImage', FileType::class)
-            ->add('idCategorie', EntityType::class, [
-                'class' => Categorie::class,
-                'choice_label' => 'libelle',
-            ]);
+            ->add('id_categorie')
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

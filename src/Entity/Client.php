@@ -13,13 +13,11 @@ use Doctrine\ORM\Mapping as ORM;
 class Client
 {
     /**
-     * @var int
-     *
-     * @ORM\Column(name="Id_Client", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
      */
-    private $idClient;
+    private $id;
 
     /**
      * @var string
@@ -84,21 +82,20 @@ class Client
      */
     private $telephone;
 
-
     /**
-     * @return int
+     * @return mixed
      */
-    public function getIdClient(): int
+    public function getId()
     {
-        return $this->idClient;
+        return $this->id;
     }
 
     /**
-     * @param int $idClient
+     * @param mixed $id
      */
-    public function setIdClient(int $idClient): void
+    public function setId($id): void
     {
-        $this->idClient = $idClient;
+        $this->id = $id;
     }
 
     /**
@@ -245,7 +242,10 @@ class Client
         $this->telephone = $telephone;
     }
 
-
+    public function __toString()
+    {
+        return $this->nom.' '.$this->prenom;
+    }
 
 
 }
