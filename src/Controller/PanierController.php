@@ -22,7 +22,7 @@ class PanierController extends AbstractController
         $panier = array();
         if($session->get('panier')){
             foreach ($session->get('panier') as $idProduit => $quantite){
-                $arrayProduit = $produitRepository->findBy(['idProduit'=>$idProduit]);
+                $arrayProduit = $produitRepository->findBy(['id'=>$idProduit]);
                 $produit = $arrayProduit[0];
                 array_push($panier, array($produit, $quantite));
             }
@@ -48,15 +48,15 @@ class PanierController extends AbstractController
             $panier = $session->get('panier', array() );
         }
 
-        if (isset( $panier[$produit->getIdProduit()]) ) {
-            if($produitBdd->getStock() > $panier[$produit->getIdProduit()]){
-                $panier[$produit->getIdProduit()]++;
+        if (isset( $panier[$produit->getId()]) ) {
+            if($produitBdd->getStock() > $panier[$produit->getId()]){
+                $panier[$produit->getId()]++;
                 $this->addFlash('notice','Produit ajouté au panier');
             }else{
                 $this->addFlash('error','Stock atteint');
             }
         } else {
-            $panier[$produit->getIdProduit()] = 1;
+            $panier[$produit->getId()] = 1;
         }
 
         $session->set('panier',$panier);
@@ -76,12 +76,12 @@ class PanierController extends AbstractController
             $panier = $session->get('panier', array() );
         }
 
-        if (isset( $panier[$produit->getIdProduit()]) ) {
-            if($panier[$produit->getIdProduit()] > 1){
-                $panier[$produit->getIdProduit()]--;
+        if (isset( $panier[$produit->getId()]) ) {
+            if($panier[$produit->getId()] > 1){
+                $panier[$produit->getId()]--;
                 $this->addFlash('notice','Produit décrémenté du panier');
             }else{
-                unset($panier[$produit->getIdProduit()]);
+                unset($panier[$produit->getId()]);
                 $this->addFlash('notice','Produit supprimé du panier');
             }
         } else {
@@ -113,7 +113,7 @@ class PanierController extends AbstractController
 
         $panier = array();
         foreach ($session->get('panier') as $idProduit => $quantite){
-            $arrayProduit = $produitRepository->findBy(['idProduit'=>$idProduit]);
+            $arrayProduit = $produitRepository->findBy(['id'=>$idProduit]);
             $produit = $arrayProduit[0];
             array_push($panier, array($produit, $quantite));
         }

@@ -17,7 +17,7 @@
                     <tr>
                         <th scope="col">Produit</th>
                         <th scope="col">Quantité</th>
-                        <th scope="col" class="d-none d-lg-block">Prix Unitaire</th>
+                        <th scope="col" class="d-none d-lg-block border-0">Prix Unitaire</th>
                         <th scope="col">Prix Total</th>
                         <th scope="col">Supprimer</th>
                     </tr>
@@ -29,21 +29,21 @@
                         {% set montantTotal = montantTotal + produit[0].tarif * produit[1] %}
                     <tr>
                         <th>
-                            <img src="../{{ produit[0].lienImage }}" class="image-panier"> <p class="">{{ produit[0].libelle }}</p> </th>
+                            <img src="../Images/Produits/{{ produit[0].lienImage }}" class="image-panier"> <p class="">{{ produit[0].libelle }}</p> </th>
                         <th>
                             <div class="row">
                                 <div class="col-lg-6 col-sm-12">
-                                    <input type="number" min="0" max="{{ produit[0].stock }}" id="Quantite_{{ produit[0].idProduit }}" class="form-control d-flex justify-content-center my-3" name="updatePanier[{{ produit[0].idProduit }}]" value="{{ produit[1] }}" >
-                                    <input type="hidden" value="{{ produit[0].idProduit }}">
+                                    <input type="number" min="0" max="{{ produit[0].stock }}" id="Quantite_{{ produit[0].id }}" class="form-control d-flex justify-content-center my-3" name="updatePanier[{{ produit[0].id }}]" value="{{ produit[1] }}" >
+                                    <input type="hidden" value="{{ produit[0].id }}">
                                     {% for message in app.flashes('error') %}
                                         <p class="text-danger text-center">{{ message }}</p>
                                     {% endfor %}
                                 </div>
                                 <div class="col-lg-6 d-none d-lg-block">
-                                    <a href="{{ path('addPanier', {'id': produit[0].idProduit}) }}" class="d-flex justify-content-center my-3 float-left">
+                                    <a href="{{ path('addPanier', {'id': produit[0].id}) }}" class="d-flex justify-content-center my-3 float-left">
                                         <img src="../Icones/icons8-plus-64.png" class="icone" >
                                     </a>
-                                    <a href="{{ path('delProduitPanier', {'id': produit[0].idProduit}) }}" class="d-flex justify-content-center my-3">
+                                    <a href="{{ path('delProduitPanier', {'id': produit[0].id}) }}" class="d-flex justify-content-center my-3">
                                         <img src="../Icones/icons8-moins-64.png" class="icone" >
                                     </a>
                                 </div>
@@ -52,17 +52,17 @@
                                 {% endfor %}
                             </div>
                         </th>
-                        <th class="d-none d-lg-block"> <p class=" d-flex justify-content-center my-3">{{ produit[0].tarif }} €</p> </th>
+                        <th class="d-none d-lg-block border-left-0 border-right-0 border-bottom-0"> <p class=" d-flex justify-content-center my-3">{{ produit[0].tarif }} €</p> </th>
                         <th> <p class="d-flex justify-content-center my-3">{{ produit[0].tarif * produit[1] }} €</p> </th>
-                        <th> <a href="{{ path('delProduitPanier', {'id': produit[0].idProduit}) }}" class="d-flex justify-content-center my-3">
+                        <th> <a href="{{ path('delProduitPanier', {'id': produit[0].id}) }}" class="d-flex justify-content-center my-3">
                                 <img src="../Icones/icons8-supprimer-pour-toujours-64.png" class="icone" ></a> </th>
                     </tr>
                     {% endfor %}
                     </tbody>
                 </table>
-                <div class="row align-items-center">
+                <div class="row align-items-center" id="btn-container">
                     <input class="form-control col-lg-3 col-sm-6" id="submitPanier" type="submit" name="Valider" value="Actualiser le panier">
-                    <span class="offset-lg-6 col-lg-3 offset-sm-2 col-sm-4">Montant Total:  {{ montantTotal }} € </span>
+                    <span id="" class="offset-lg-6 col-lg-3 offset-sm-2 col-sm-4">Montant Total:  {{ montantTotal }} € </span>
                 </div>
             </form>
             {% else %}
@@ -88,4 +88,31 @@
 
 {% block javascriptsSupp %}
     {{ encore_entry_script_tags('Panier') }}
+    <script src="https://www.paypal.com/sdk/js?client-id=ASs7PJSSmM2uDZLiscfYPUbpWIDmRBIvsdjHVradMFbS6BcjdnrwETaQ1T-ZIS7rTkX4vbm2ApRHKwRQ&components=buttons"></script>
+    <script>
+        paypal.Buttons({
+            style: {
+                layout: 'vertical',
+                color:'black',
+                shape: 'rect',
+                label: 'paypal'
+
+            },
+            createOrder: function(data, actions){
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '10.00'
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data, actions){
+                return actions.order.capture().then(function (details) {
+                    alert('La transaction à bien été effectué '+ details.payer.name.given_name);
+                });
+
+            }
+        }).render('#btn-container');
+    </script>
 {% endblock %}

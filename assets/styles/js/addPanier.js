@@ -3,7 +3,8 @@
         event.preventDefault();
         $.get($(this).attr('href'),{},function(data){
             alert('Produit ajouté au panier');
-        },'json');
+        },'json')
+        ;
         return false;
     });
 })(jQuery);
