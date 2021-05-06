@@ -17,7 +17,7 @@ apt-get install git
 Auquel cas :
 
 ```bash
-git clone https://github.com/Notso1knOwn/PPE3.git
+git clone https://github.com/Notso1knOwn/PPE4.git
 ```
 
 Aussi non téléchargez le zip du projet et dézipper dans le répertoire que vous lui avez affecté.
