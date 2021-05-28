@@ -36,3 +36,6 @@ N'oubliez pas de changer les info de la BDD dans le .env
 ```bash
 DATABASE_URL="mysql://BBD_USER:BDD_PASSWORD@IP:PORT/BDD_DBNAME?serverVersion=5&charset=utf8"
 ```
+
+## Documentation et fichier SQL
+Les documentations technique et utilisateur se trouvent dans la branche main ainsi que le fichier sql.
